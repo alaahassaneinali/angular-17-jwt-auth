@@ -2,8 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const AUTH_API = 'http://localhost:8080/api/auth/';
-
+const AUTH_API = '/api/auth/';
+// const AUTH_API = '/api/v1/auth/';
+// const AUTH_API = 'http://localhost:8082/api/v1/auth/';
+// localhost:8082/api/v1/auth/signup
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -32,6 +34,7 @@ export class AuthService {
         username,
         email,
         password,
+        roles: ['ADMIN']
       },
       httpOptions
     );

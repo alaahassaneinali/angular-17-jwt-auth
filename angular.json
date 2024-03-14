@@ -75,7 +75,8 @@
               "buildTarget": "angular-17-jwt-auth:build:production"
             },
             "development": {
-              "buildTarget": "angular-17-jwt-auth:build:development"
+              "buildTarget": "angular-17-jwt-auth:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
